@@ -1,10 +1,13 @@
 {
-  "name": "react-native-gravatar",
-  "version": "0.0.1",
+  "name": "react-native-avatar-gravatar",
+  "version": "0.0.2",
   "description": "React Native Gravatar component",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "blueimp-md5" : "^2.3"
   },
   "repository": {
     "type": "git",
