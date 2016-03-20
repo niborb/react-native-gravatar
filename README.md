@@ -14,7 +14,7 @@ React Native Gravatar is a simple component that loads the avatar with an option
 
 ### Usage
 ```javascript
-import Gravatar from '.react-native-avatar-gravatar';
+import Gravatar from 'react-native-avatar-gravatar';
 
 class Application extends Component {  
   render () {
