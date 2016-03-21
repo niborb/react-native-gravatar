@@ -1,7 +1,7 @@
 ## React Native Gravatar component
 
-[![npm version](https://img.shields.io/npm/v/react-native-avatar-gravatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-drawer)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-avatar-gravatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-drawer)
+[![npm version](https://img.shields.io/npm/v/react-native-avatar-gravatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-avatar-gravatar)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-avatar-gravatar.svg?style=flat-square)](https://www.npmjs.com/package/react-native-avatar-gravatar)
 
 
 React Native Gravatar is a simple component that loads the avatar with an option to mask it with a circle, rounded or square shape.
