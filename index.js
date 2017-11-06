@@ -7,7 +7,7 @@ import {
 
 import md5 from 'blueimp-md5';
 
-const GRAVATAR_URI = 'http://www.gravatar.com/avatar/';
+const GRAVATAR_URI = 'www.gravatar.com/avatar/';
 
 class Gravatar extends React.Component {
 
@@ -30,7 +30,9 @@ class Gravatar extends React.Component {
     }
 
     render() {
-        const uri = GRAVATAR_URI + md5(this.props.emailAddress) + '?s=' + this.props.size;
+        const protocol = this.props.secure ? 'https://' : 'http://';
+
+        const uri = protocol + GRAVATAR_URI + md5(this.props.emailAddress) + '?s=' + this.props.size;
         const style = this._calculateStyle();
         return (
             <View style={[styles.overlay]}>
@@ -49,7 +51,8 @@ Gravatar.propTypes = {
 
 Gravatar.defaultProps = {
     size: 600,
-    mask: 'circle'
+    mask: 'circle',
+    secure: true
 };
 
 const styles = StyleSheet.create({
