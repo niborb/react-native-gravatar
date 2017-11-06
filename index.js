@@ -30,13 +30,9 @@ class Gravatar extends React.Component {
     }
 
     render() {
-        var PROTOCOL = 'https://';
+        const protocol = this.props.secure ? 'https://' : 'http://';
 
-        if (false === this.props.secure) {
-            PROTOCOL = 'http://';
-        }
-
-        const uri = PROTOCOL + GRAVATAR_URI + md5(this.props.emailAddress) + '?s=' + this.props.size;
+        const uri = protocol + GRAVATAR_URI + md5(this.props.emailAddress) + '?s=' + this.props.size;
         const style = this._calculateStyle();
         return (
             <View style={[styles.overlay]}>
