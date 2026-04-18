@@ -1,18 +1,53 @@
 {
   "name": "react-native-avatar-gravatar",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "React Native Gravatar component",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "source": "src/index.tsx",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf lib",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json",
+    "test": "jest",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,json,md}\"",
+    "prepare": "npm run clean && npm run build",
+    "prepublishOnly": "npm run lint && npm test && npm run build"
   },
   "dependencies": {
-    "blueimp-md5": "^2.3",
-    "prop-types": "^15.6.1"
+    "blueimp-md5": "^2.19.0"
   },
   "peerDependencies": {
-    "react": ">=16.0.0-alpha.3",
-    "react-native": ">=0.46.0"
+    "react": ">=18.0.0",
+    "react-native": ">=0.70.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.4.0",
+    "@types/blueimp-md5": "^2.18.2",
+    "@types/jest": "^29.5.12",
+    "@types/react": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-native": "^4.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "react": "18.3.1",
+    "react-native": "0.76.0",
+    "react-test-renderer": "18.3.1",
+    "rimraf": "^5.0.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.0"
   },
   "repository": {
     "type": "git",
@@ -25,7 +60,8 @@
     "react-native",
     "ios",
     "android",
-    "react-native-gravatar"
+    "react-native-gravatar",
+    "typescript"
   ],
   "author": "Robin Breuker",
   "license": "ISC",

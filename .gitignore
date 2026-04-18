@@ -1,1 +1,7 @@
 node_modules/
+lib/
+coverage/
+.DS_Store
+*.log
+.vscode/
+.idea/
